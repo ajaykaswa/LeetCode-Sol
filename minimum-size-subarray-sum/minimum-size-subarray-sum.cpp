@@ -7,9 +7,8 @@ public:
         while(start2<nums.size()){
             sum+=nums[start2++];
             while(sum>=target){
+                min1=min(min1,start2-start1);
                 sum-=nums[start1++];
-                min1=min(min1,start2-start1+1);
-            
            }
         }
         if(min1==INT_MAX) return 0;
